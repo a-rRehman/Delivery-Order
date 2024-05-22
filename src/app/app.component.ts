@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NewDeliveryOrderComponent } from './new-delivery-order/new-delivery-order.component';
+import { DeliveryOrderComponent } from './delivery-order/delivery-order.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +13,7 @@ import { NewDeliveryOrderComponent } from './new-delivery-order/new-delivery-ord
     RouterOutlet,
     ButtonModule,
     ReactiveFormsModule,
-    NewDeliveryOrderComponent,
+    DeliveryOrderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

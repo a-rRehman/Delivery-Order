@@ -1,0 +1,48 @@
+.delivery-order-form {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    .form-group {
+      flex: 1;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      p-dropdown {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    p-dropdown {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      display: block;
+    }
+  }
+}
