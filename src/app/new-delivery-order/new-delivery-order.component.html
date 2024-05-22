@@ -1,1 +1,34 @@
-<p>new-delivery-order works!</p>
+<form [formGroup]="deliveryOrderForm" (ngSubmit)="onSubmit()">
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="client">Client</label>
+      <input id="client" type="text" formControlName="client" pInputText />
+    </div>
+
+    <fieldset>
+      <legend>Ordered By</legend>
+      <div class="p-field">
+        <label for="firstName">First Name</label>
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          pInputText
+        />
+      </div>
+      <div class="p-field">
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          pInputText
+        />
+      </div>
+    </fieldset>
+
+    <!-- Add similar blocks for pickUp, dropOff, serviceDetails, etc. -->
+
+    <button type="submit" pButton label="Submit Order">Submit</button>
+  </div>
+</form>
