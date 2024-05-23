@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @Component({
   selector: 'app-delivery-order',
@@ -15,6 +17,8 @@ import { ButtonModule } from 'primeng/button';
     DropdownModule,
     InputTextModule,
     ButtonModule,
+    CheckboxModule,
+    InputTextareaModule,
   ],
   templateUrl: './delivery-order.component.html',
   styleUrls: ['./delivery-order.component.scss'],
@@ -26,6 +30,7 @@ export class DeliveryOrderComponent {
     { name: 'Jackson Lewis', code: 'JL' },
     { name: 'Other Client', code: 'OC' },
   ];
+
   users = [
     { name: 'User 1', code: 'U1' },
     { name: 'User 2', code: 'U2' },
@@ -41,16 +46,68 @@ export class DeliveryOrderComponent {
     { name: 'Address B', code: 'AA2' },
   ];
 
+  serviceLevels = [
+    { name: 'Standard', code: 'SL1' },
+    { name: 'Express', code: 'SL2' },
+    { name: 'Overnight', code: 'SL3' },
+  ];
+
+  serviceAreas = [
+    { name: 'Area 1', code: 'A1' },
+    { name: 'Area 2', code: 'A2' },
+  ];
+
   constructor(private fb: FormBuilder) {
     this.deliveryOrderForm = this.fb.group({
       client: [null, Validators.required],
       user: [null, Validators.required],
       firstName: ['', Validators.required],
+      firstName1: ['', Validators.required],
+      firstName2: ['', Validators.required],
       lastName: ['', Validators.required],
+      lastName1: ['', Validators.required],
+      lastName2: ['', Validators.required],
       addressBook: ['', Validators.required],
       addressBook1: ['', Validators.required],
       bookEntry: ['', Validators.required],
       bookEntry1: ['', Validators.required],
+      companyName: ['', Validators.required],
+      companyName1: ['', Validators.required],
+      city: ['', Validators.required],
+      city1: ['', Validators.required],
+      state: ['', Validators.required],
+      state1: ['', Validators.required],
+      zip: ['', Validators.required],
+      zip1: ['', Validators.required],
+      phone: ['', Validators.required],
+      phone1: ['', Validators.required],
+      extension: ['', Validators.required],
+      extension1: ['', Validators.required],
+      email: ['', Validators.required],
+      email1: ['', Validators.required],
+      serviceLevel: [null, Validators.required],
+      quantity: [1, Validators.required],
+      desiredDeliveryDate: ['', Validators.required],
+      billingReference: [''],
+      description: [''],
+      specialInstructions: [''],
+      calculatedMiles: [''],
+      calculatedServiceArea: [''],
+      estimatedCharges: [''],
+      total: [{ value: '$0.00', disabled: true }],
+      finalMiles: [''],
+      overrideServiceArea: [''],
+      overrideCalculations: [false],
+      manualChargeEntry: [false],
+      overrideCharges: [''],
+      leaveWithoutSignature: [false],
+      returnService: [false],
+      residenceOrMedicalCenter: [false],
+      processNotification: [false],
+      deliveryOver25Lbs: [false],
+      notaryService: [false],
+      nightWeekendHoliday: [false],
+      deliveryNotification: [false],
     });
   }
 
