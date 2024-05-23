@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeliveryOrderComponent } from './delivery-order/delivery-order.component';
+import { TreeTableSelectionCheckboxDemo } from './tree-table-selection-checkbox-demo/tree-table-selection-checkbox-demo.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { DeliveryOrderComponent } from './delivery-order/delivery-order.componen
     ButtonModule,
     ReactiveFormsModule,
     DeliveryOrderComponent,
+    TreeTableSelectionCheckboxDemo,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
